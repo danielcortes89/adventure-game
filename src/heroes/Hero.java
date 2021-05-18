@@ -2,9 +2,9 @@ package heroes;
 
 public class Hero {
     public String name = "";
-    String standardAttack = "Punch";
-    String specialAttack = "Drop Kick";
-    String heavyAttack = "Roundhouse Kick";
+    public String standardAttack = "Punch";
+    public String specialAttack = "Drop Kick";
+    public String heavyAttack = "Roundhouse Kick";
 
 
     int health = 100;

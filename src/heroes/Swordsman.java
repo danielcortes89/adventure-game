@@ -1,7 +1,7 @@
 package heroes;
 
 public class Swordsman extends Hero{
-    public String name = "Swordsman";
+//    public String name = "Swordsman";
     String standardAttack = "Swings";
     String specialAttack = "Heavy Slash";
     String heavyAttack = "Stabs";
