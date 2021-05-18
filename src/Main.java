@@ -7,16 +7,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-
+        Hero player = null;
         Random rand = new Random();
 
-        initialConfig();
+        player = initialConfig(player);
+        System.out.println(player.standardAttack);
     }
 
-    public static void initialConfig() {
+    public static Hero initialConfig(Hero player) {
         Scanner in = new Scanner(System.in);
         Boolean finished = false;
-        Hero player = null;
 
         System.out.println("Hello and welcome to our adventure game!");
         System.out.println("What is your name?");
@@ -68,13 +68,13 @@ public class Main {
 
             } else if(input.equals("4")){
                 System.out.println("Maybe next time.");
-                return;
+                return player;
             } else {
                 System.out.println("\tInvalid command.");
             }
         }
 //        System.out.println(player.name);
-
+        return player;
 
     }
 }
