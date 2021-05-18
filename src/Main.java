@@ -39,9 +39,9 @@ public class Main {
                 String swordAns = in.nextLine();
                 if(swordAns.equalsIgnoreCase("Y")){
                     System.out.println("Welcome " + name + " the Swordsman!");
-//                    player = new Swordsman();
-//                    player.name = name + " the Swordsman!";
-//                    System.out.println(player.standardAttack);
+                    player = new Swordsman();
+                    player.name = name + " the Swordsman!";
+                    System.out.println(player.standardAttack);
                     finished = true;
                 }
             } else if (input.equals("2")) {
