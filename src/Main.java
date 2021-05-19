@@ -11,7 +11,10 @@ public class Main {
         Random rand = new Random();
 
         player = initialConfig(player);
-        System.out.println(player.standardAttack);
+        if(player == null){
+           return;
+        }
+        System.out.println(player.name);
     }
 
     public static Hero initialConfig(Hero player) {
@@ -41,7 +44,6 @@ public class Main {
                     System.out.println("Welcome " + name + " the Swordsman!");
                     player = new Swordsman();
                     player.name = name + " the Swordsman!";
-                    System.out.println(player.standardAttack);
                     finished = true;
                 }
             } else if (input.equals("2")) {
