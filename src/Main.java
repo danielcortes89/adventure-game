@@ -1,3 +1,5 @@
+import heroes.Dwarf;
+import heroes.Elf;
 import heroes.Hero;
 import heroes.Swordsman;
 
@@ -14,7 +16,7 @@ public class Main {
         if(player == null){
            return;
         }
-        System.out.println(player.name);
+        System.out.println(player.heavyAttack);
     }
 
     public static Hero initialConfig(Hero player) {
@@ -54,6 +56,8 @@ public class Main {
                 String swordAns = in.nextLine();
                 if(swordAns.equalsIgnoreCase("Y")){
                     System.out.println("Welcome " + name + " the Elf!");
+                    player = new Elf();
+                    player.name = name + " the Elf";
                     finished = true;
                 }
 
@@ -65,6 +69,8 @@ public class Main {
                 String swordAns = in.nextLine();
                 if(swordAns.equalsIgnoreCase("Y")){
                     System.out.println("Welcome " + name + " the Dwarf!");
+                    player = new Dwarf();
+                    player.name = name + " the Dwarf";
                     finished = true;
                 }
 
