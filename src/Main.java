@@ -16,7 +16,8 @@ public class Main {
         if(player == null){
            return;
         }
-        System.out.println(player.heavyAttack);
+
+        introScroll(player);
     }
 
     public static Hero initialConfig(Hero player) {
@@ -81,8 +82,25 @@ public class Main {
                 System.out.println("\tInvalid command.");
             }
         }
-//        System.out.println(player.name);
-        return player;
 
+        return player;
+    }
+
+    public static void javaSetTimeout(Runnable runnable, int wait) {
+        new Thread(() -> {
+            try {
+                Thread.sleep(wait);
+                runnable.run();
+            }
+            catch (Exception e){
+                System.err.println(e);
+            }
+        }).start();
+    }
+
+    public static void introScroll(Hero player) {
+        javaSetTimeout(() -> System.out.println("Welcome to the land of arda"), 1000);
+        Hero finalPlayer = player;
+        javaSetTimeout(() -> System.out.println("You are " + finalPlayer.name), 3000);
     }
 }
