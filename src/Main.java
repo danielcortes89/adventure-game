@@ -18,6 +18,7 @@ public class Main {
         }
 
         introScroll(player);
+        System.out.println("Ready for next");
     }
 
     public static Hero initialConfig(Hero player) {
@@ -44,9 +45,8 @@ public class Main {
                 System.out.println("Play as the Swordsman? Y/N");
                 String swordAns = in.nextLine();
                 if(swordAns.equalsIgnoreCase("Y")){
-                    System.out.println("Welcome " + name + " the Swordsman!");
                     player = new Swordsman();
-                    player.name = name + " the Swordsman!";
+                    player.name = name + " the Swordsman";
                     finished = true;
                 }
             } else if (input.equals("2")) {
@@ -56,7 +56,6 @@ public class Main {
                 System.out.println("Play as the Elf? Y/N");
                 String swordAns = in.nextLine();
                 if(swordAns.equalsIgnoreCase("Y")){
-                    System.out.println("Welcome " + name + " the Elf!");
                     player = new Elf();
                     player.name = name + " the Elf";
                     finished = true;
@@ -69,7 +68,6 @@ public class Main {
                 System.out.println("Play as the Dwarf? Y/N");
                 String swordAns = in.nextLine();
                 if(swordAns.equalsIgnoreCase("Y")){
-                    System.out.println("Welcome " + name + " the Dwarf!");
                     player = new Dwarf();
                     player.name = name + " the Dwarf";
                     finished = true;
@@ -99,8 +97,15 @@ public class Main {
     }
 
     public static void introScroll(Hero player) {
-        javaSetTimeout(() -> System.out.println("Welcome to the land of arda"), 1000);
+        Scanner in = new Scanner(System.in);
+        String name = "";
+
+        javaSetTimeout(() -> System.out.println("Welcome to the land of Arda"), 1000);
         Hero finalPlayer = player;
-        javaSetTimeout(() -> System.out.println("You are " + finalPlayer.name), 3000);
+        javaSetTimeout(() -> System.out.println("You are " + finalPlayer.name + "!"), 3000);
+        javaSetTimeout(() -> System.out.println("You must travel to the tower of Bara dur and slay Sauron"), 5000);
+        javaSetTimeout(() -> System.out.println("The journey will be long and arduous"), 7000);
+        javaSetTimeout(() -> System.out.println("You must steel yourself for the task ahead"), 9000);
+        javaSetTimeout(() -> System.out.println("Let's Begin"), 11000);
     }
 }
