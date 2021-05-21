@@ -19,8 +19,6 @@ public class Main {
 
         introScroll(player);
 
-        System.out.println("You enter the swamp.");
-
         swampLoop(player);
         System.out.println("Ready for next");
     }
@@ -111,6 +109,8 @@ public class Main {
         javaSetTimeout(() -> System.out.println("The journey will be long and arduous"), 7000);
         javaSetTimeout(() -> System.out.println("You must steel yourself for the task ahead"), 9000);
         javaSetTimeout(() -> System.out.println("Let's Begin"), 11000);
+        javaSetTimeout(() -> System.out.println("Press any key to continue"), 11000);
+        in.nextLine();
     }
 
     public static void swampLoop(Hero player) {
@@ -118,16 +118,19 @@ public class Main {
         int yAxis = 1;
         int xAxis = 3;
 
+        System.out.println("You enter the sawmp of the dead");
+
         while(isRunning){
-            System.out.println("You enter the sawmp of the dead");
-            System.out.println("What will you do?");
+
             swampOptions("start");
             isRunning = false;
-        }
+        };
 
     }
 
     public static void swampOptions(String position) {
+        System.out.println("What will you do?");
+
         if(position.equals("start")){
             System.out.println("1 - Proceed North");
             System.out.println("2 - Proceed West");
