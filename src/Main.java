@@ -1,7 +1,4 @@
-import heroes.Dwarf;
-import heroes.Elf;
-import heroes.Hero;
-import heroes.Swordsman;
+import heroes.*;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -20,6 +17,8 @@ public class Main {
         introScroll(player);
 
         swampLoop(player);
+        int select = rand.nextInt(5);
+        Enemy enemy = null;
         System.out.println("Ready for next");
     }
 
