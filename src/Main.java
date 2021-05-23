@@ -1,5 +1,6 @@
 import heroes.*;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -117,24 +118,46 @@ public class Main {
         int yAxis = 1;
         int xAxis = 3;
 
+
         System.out.println("You enter the sawmp of the dead");
 
+        swampOptions("start", yAxis, xAxis);
         while(isRunning){
 
-            swampOptions("start");
+            System.out.println(yAxis);
+            System.out.println(xAxis);
             isRunning = false;
         };
 
     }
 
-    public static void swampOptions(String position) {
+    public static void swampOptions(String position, int yAxis, int xAxis) {
+        Scanner in = new Scanner(System.in);
         System.out.println("What will you do?");
 
         if(position.equals("start")){
             System.out.println("1 - Proceed North");
             System.out.println("2 - Proceed West");
             System.out.println("3 - Proceed East");
+
+            String option = in.nextLine();
+
+            if(option.equalsIgnoreCase("1")){
+                System.out.println("You proceed North");
+                yAxis = yAxis + 1;
+                System.out.println(yAxis);
+            } else if (option.equalsIgnoreCase("2")){
+                System.out.println("You Proceed west");
+                xAxis--;
+            } else if(option.equalsIgnoreCase("3")){
+                System.out.println("You proceed east");
+                xAxis++;
+            } else {
+                System.out.println("Try again");
+                swampOptions("start", yAxis, xAxis);
+            }
         }
+
         return;
     }
 }
