@@ -129,6 +129,22 @@ public class Main {
             isRunning = false;
         };
 
+//        The Plan
+//        PART 1
+//        Have 4 sections that involve navigation
+//        --swamp, gate, mordor, baradur
+//        Have random battles with level up mechanic
+//        --progressive difficulty
+//        Final Boss
+//        --special features?
+
+//        PART 2
+//        Inventory
+//        --WEAPONS and armor
+//        Locations that have buttons
+//        --Button opens up switch
+
+
     }
 
     public static void swampOptions(String position, int yAxis, int xAxis) {
